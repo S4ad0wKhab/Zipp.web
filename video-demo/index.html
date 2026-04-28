@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ดูตัวอย่างและดาวน์โหลดไฟล์</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* เปลี่ยนเป็น min-height เผื่อเนื้อหายาว */
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .download-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px; /* ขยายขนาดเพิ่มขึ้นเล็กน้อยเพื่อให้เห็นภาพชัด */
+            text-align: center;
+        }
+
+        /* ส่วนแสดงผลตัวอย่าง (Preview Area) */
+        .preview-box {
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #000; /* พื้นหลังสีดำสำหรับวิดีโอ */
+            line-height: 0;
+        }
+        .preview-box img, .preview-box video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .info-group {
+            text-align: left;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        .info-item {
+            margin: 8px 0;
+            color: #555;
+            font-size: 0.95rem;
+        }
+        .label {
+            font-weight: bold;
+            color: #333;
+        }
+        .btn-download {
+            display: inline-block;
+            background-color: #28a745; /* เปลี่ยนเป็นสีเขียวให้ดูสดชื่น */
+            color: white;
+            padding: 14px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: transform 0.2s, background 0.3s;
+            width: 80%;
+        }
+        .btn-download:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="download-card">
+        <h2>🎥 พรีวิวไฟล์</h2>
+
+        <div class="preview-box">
+            <video controls>
+                <source src="video-demo.mp4" type="video/mp4">
+                เบราว์เซอร์ของคุณไม่รองรับการเล่นวิดีโอ
+            </video>
+
+            </div>
+        
+        <div class="info-group">
+            <div class="info-item">
+                <span class="label">ชื่อไฟล์:</span> video-demo.mp4
+            </div>
+            <div class="info-item">
+                <span class="label">ขนาดไฟล์:</span> 28.65 MB
+            </div>
+            <div class="info-item">
+                <span class="label">ผู้อัพโหลด:</span> S4ad0wKhab
+            </div>
+        </div>
+
+        <a href="video-demo.mp4" download class="btn-download">
+            📥 ดาวน์โหลดไฟล์ต้นฉบับ
+        </a>
+    </div>
+
+</body>
+</html>
